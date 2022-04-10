@@ -1,6 +1,7 @@
 function meuEscopo() {
     const form = document.querySelector('.form');
     const resultado = document.querySelector('.resultado');
+    const buttonCalc = document.querySelector('.buttonCalc');
     
         function recebeEventoForm(evento){
         evento.preventDefault(); 
@@ -9,8 +10,12 @@ function meuEscopo() {
         const altura = form.querySelector('.altura').value;
         const imc = peso / (altura * altura);
 
-        resultado.innerHTML = ' '
+        resultado.innerHTML = ''
         resultado.innerHTML += `Seu IMC é ${imc.toFixed(2)}`
+        buttonCalc.innerHTML = 'Calcular';
+        buttonCalc.style.background="#0A6961";
+        buttonCalc.style.cursor="pointer";
+
         if (imc <= 18.5) {
             resultado.innerHTML += ` (Abaixo do peso)`
 
@@ -30,10 +35,10 @@ function meuEscopo() {
             resultado.innerHTML += ` (Obesidade grau 3)`
 
         }else {
-            resultado.innerHTML = ' '
-            buttonCale.innerHTML = 'Insira um valor para calcular';
-            buttonCale.style.background = '#ad2d49';
-            buttonCale.style.cursor = 'no-drop';
+            resultado.innerHTML = ''
+            buttonCalc.innerHTML = 'Insira um valor para calcular';
+            buttonCalc.style.background = '#ad2d49';
+            buttonCalc.style.cursor = 'no-drop';
         }
         
     }
