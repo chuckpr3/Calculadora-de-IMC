@@ -2,7 +2,6 @@ function meuEscopo() {
     const form = document.querySelector('.form');
     const resultado = document.querySelector('.resultado');
     
-
         function recebeEventoForm(evento){
         evento.preventDefault(); 
 
@@ -31,7 +30,10 @@ function meuEscopo() {
             resultado.innerHTML += ` (Obesidade grau 3)`
 
         }else {
-            resultado.innerHTML += ` (ERRO)`
+            resultado.innerHTML = ' '
+            buttonCale.innerHTML = 'Insira um valor para calcular';
+            buttonCale.style.background = '#ad2d49';
+            buttonCale.style.cursor = 'no-drop';
         }
         
     }
