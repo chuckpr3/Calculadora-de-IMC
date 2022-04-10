@@ -9,7 +9,8 @@ function meuEscopo() {
         const peso = form.querySelector('.peso').value;
         const altura = form.querySelector('.altura').value;
         const imc = peso / (altura * altura);
-    
+
+        resultado.innerHTML = ' '
         resultado.innerHTML += `Seu IMC é ${imc.toFixed(2)}`
         if (imc <= 18.5) {
             resultado.innerHTML += ` (Abaixo do peso)`
